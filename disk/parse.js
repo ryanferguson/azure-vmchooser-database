@@ -17,7 +17,7 @@ for(var offer in offers){
   var capacity = offers[offer].size;
   var throughput = offers[offer].speed;
   var iops = offers[offer].iops;
-  
+  if (offername[2] != "disk" && offername[3] != "mount"){
     for (var price in offers[offer].prices) {
         if (price === undefined) {
             //console.log(picked);
@@ -42,4 +42,5 @@ for(var offer in offers){
             console.log(name + ",disk," + tier + "," + disktype + "," + size + "," + region + "," + priceUSD + "," + capacity + "," + iops + "," + throughput + "," + name + "," + priceUSD + "," + priceEUR + "," + priceGBP + "," + priceAUD + "," + priceJPY + "," + priceCAD + "," + priceDKK + "," + priceCHF + "," + priceSEK + "," + priceIDR + "," + priceINR + "," + priceRUB);
         }
     }
+  }
 }
